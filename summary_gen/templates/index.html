@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            background-image: url('/static/PPT.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #333333;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea, select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        #summary {
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /* Your jQuery script here */
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Text Summarizer</h1>
+        <form method="POST">
+            <label for="input_text">Input Text:</label>
+            <textarea id="input_text" name="input_text" rows="6" cols="50"></textarea><br>
+            <label for="model_name">Select Model:</label>
+            <select id="model_name" name="model_name">
+                <option value="t5">T5</option>
+                <option value="Da-Vinci">Da-Vinci</option>
+                <option value="pegasus">Pegasus</option>
+            </select><br>
+            <input type="submit" value="Generate Summary">
+            <a href="/qa_generator" class="button">Generate Question and Answer</a>
+        </form>
+        <div id="summary">
+            {% if summary %}
+                <h2>Generated Summary:</h2>
+                <p>{{ summary }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+

@@ -44,7 +44,5 @@ To customize or modify the behavior of the model within the Summarization Tool, 
 
 If you need to make changes to pipelines.py to suit your project's requirements, please reach out to the developer for guidance and assistance. You can contact the developer for assistance by using the contact information provided in the project documentation.
 
-# Contact
-If you need assistance or have any questions regarding the Summarization Tool, please contact the developer at syed21100@iiitd.ac.in.
 
 **Thank you for using the Summarization Tool!**
